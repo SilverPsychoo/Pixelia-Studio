@@ -94,79 +94,12 @@ Cuando se elimina un color de la paleta, los píxeles que lo utilizaban se reasi
 
 El proyecto no incluye dependencias para procesamiento de imágenes: la conversión se realiza con las funciones nativas del navegador.
 
-## Estructura
-
-```text
-pixelia-studio-github/
-├── .github/
-│   └── workflows/
-│       └── pages.yml
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── App.tsx
-│   ├── main.tsx
-│   ├── pixel-engine.ts
-│   └── style.css
-├── .gitignore
-├── index.html
-├── package.json
-├── package-lock.json
-├── tsconfig.json
-└── vite.config.ts
-```
-
 ### Archivos principales
 
 - `src/App.tsx`: interfaz, estados, carga de archivos, vista previa y exportación.
 - `src/pixel-engine.ts`: paletas, conversión CIELAB, extracción de colores, cuantización y dithering.
 - `src/style.css`: diseño visual y adaptación responsiva.
 - `public/favicon.svg`: icono de Pixelia Studio.
-- `.github/workflows/pages.yml`: publicación automática mediante GitHub Pages.
-
-## Ejecutar en la computadora
-
-Se necesita Node.js 22 o posterior.
-
-```bash
-npm install
-npm run dev
-```
-
-Vite mostrará una dirección local, normalmente:
-
-```text
-http://localhost:5173
-```
-
-## Construir la versión final
-
-```bash
-npm run build
-```
-
-El resultado aparecerá en la carpeta `dist`.
-
-Para revisar esa versión localmente:
-
-```bash
-npm run preview
-```
-
-## Publicar con GitHub Pages
-
-El proyecto incluye un flujo de GitHub Actions que construye y publica la aplicación.
-
-1. Crea un repositorio nuevo en GitHub.
-2. Extrae el ZIP y sube el contenido de la carpeta `pixelia-studio-github`.
-3. Confirma que la rama principal se llame `main`.
-4. En GitHub abre **Settings → Pages**.
-5. En **Source**, selecciona **GitHub Actions**.
-6. Sube los cambios.
-
-El flujo **Publicar Pixelia Studio** instalará las dependencias, ejecutará la compilación y publicará la carpeta `dist`.
-
-El archivo `vite.config.ts` utiliza una ruta base relativa, por lo que funciona aunque el repositorio no se encuentre en la raíz del dominio.
 
 ## Agregar una paleta predefinida
 
@@ -194,27 +127,6 @@ Para evitar bloqueos o un consumo excesivo de memoria:
 Estos límites afectan únicamente imágenes extremadamente grandes.
 
 ## Solución de problemas
-
-### La página no inicia
-
-Comprueba la versión instalada:
-
-```bash
-node --version
-npm --version
-```
-
-Después instala nuevamente las dependencias:
-
-```bash
-npm install
-```
-
-### GitHub Pages muestra una página vacía
-
-- Verifica que **Source** esté configurado como **GitHub Actions**.
-- Revisa la pestaña **Actions** del repositorio.
-- Confirma que todos los archivos, incluida la carpeta `.github`, se hayan subido.
 
 ### Una imagen muy grande tarda en procesarse
 
