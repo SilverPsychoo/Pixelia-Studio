@@ -135,3 +135,14 @@ Aumenta el tamaño del píxel o reduce la resolución de salida. Esto disminuye 
 ## Compatibilidad
 
 Pixelia utiliza Canvas, Object URLs y Clipboard API. Está pensada para versiones recientes de Chrome, Edge, Firefox, Opera y Safari.
+
+## ☕ Apoya Pixelia Studio
+
+Si disfrutas usar Pixelia Studio, te gusta el proyecto o quieres apoyar que siga mejorando, puedes apoyar mi trabajo en Ko-fi. 💙
+
+Tu apoyo ayuda a que pueda seguir desarrollando nuevas funciones, mejorando la experiencia y manteniendo mis proyectos disponibles para todos.
+
+**[☕ Apóyame en Ko-fi](https://ko-fi.com/silverpsycho)**
+
+Usar Pixelia, compartirlo y recomendarlo también ayuda muchísimo.
+

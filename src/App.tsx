@@ -218,7 +218,10 @@ export default function Home() {
           <span className="brand-mark" aria-hidden="true"><i /><i /><i /><i /></span>
           <span><b>PIXELIA</b><small>STUDIO</small></span>
         </a>
-        <button className="ghost-button" onClick={() => inputRef.current?.click()}>{image ? "Cambiar imagen" : "Abrir imagen"}</button>
+        <div className="topbar-actions">
+          <a className="support-link" href="https://ko-fi.com/silverpsycho" target="_blank" rel="noreferrer">☕ Apoyar Pixelia</a>
+          <button className="ghost-button" onClick={() => inputRef.current?.click()}>{image ? "Cambiar imagen" : "Abrir imagen"}</button>
+        </div>
       </header>
 
       {!image ? (
