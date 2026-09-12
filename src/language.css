@@ -1,0 +1,52 @@
+.pixelia-language-toggle {
+  order: -1;
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  height: 36px;
+  padding: 3px;
+  gap: 2px;
+  border: 1px solid var(--ink, #14213d);
+  background: rgba(255, 255, 255, .42);
+}
+
+.pixelia-language-toggle button {
+  width: 34px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--muted, #74766f);
+  cursor: pointer;
+  font: 800 10px/1 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: .06em;
+  transition: background .16s ease, color .16s ease, transform .16s ease;
+}
+
+.pixelia-language-toggle button:hover {
+  color: var(--ink, #14213d);
+  transform: translateY(-1px);
+}
+
+.pixelia-language-toggle button.active {
+  background: var(--ink, #14213d);
+  color: var(--paper, #f4f2ec);
+}
+
+.pixelia-language-toggle button:focus-visible {
+  outline: 3px solid rgba(53, 89, 224, .24);
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  .pixelia-language-toggle {
+    height: 34px;
+    padding: 2px;
+  }
+
+  .pixelia-language-toggle button {
+    width: 29px;
+    height: 28px;
+    font-size: 9px;
+  }
+}
